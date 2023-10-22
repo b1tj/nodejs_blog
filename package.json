@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon --inspect src/index.js",
+        "start": "nodemon --experimental-modules --inspect src/index.js",
         "watch": "node-sass --watch src/resources/scss/ --output src/public/css/"
     },
     "keywords": [],
