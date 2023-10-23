@@ -1,13 +1,17 @@
+import Course from "../models/Course.js";
+
 class SiteController {
     //[GET] /
-    index(req, res) {
-        res.render('home')
+    async index(req, res) {
+        res.json(await Course.find({}));
+
+        // res.render("home");
     }
 
     //[GET] /search
     search(req, res) {
-        res.render('search')
+        res.render("search");
     }
 }
 
-export default new SiteController()
+export default new SiteController();
